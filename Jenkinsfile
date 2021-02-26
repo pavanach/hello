@@ -9,9 +9,7 @@ pipeline {
         }
          stage('Docker build') {
             steps {
-                sh """
-                          echo "docker images"
-                          """
+                sh "docker images"
             }
         }
 
