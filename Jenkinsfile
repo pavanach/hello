@@ -9,7 +9,7 @@ pipeline {
         }
          stage('Docker build') {
             steps {
-                sh "docker images"
+                sh "docker build -t hello-k8s ."
             }
         }
 
