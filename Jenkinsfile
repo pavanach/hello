@@ -7,9 +7,12 @@ pipeline {
                 echo 'Hello World'
             }
         }
-         stage('GoodBye') {
+         stage('Docker build') {
             steps {
-                echo 'Hello World - Good Bye'
+                sh """
+                          echo "GIT_BRANCH=${env.GIT_BRANCH}" >> /etc/environment
+                          echo "GIT_COMMIT=${env.GIT_COMMIT}" >> /etc/environment
+                          """
             }
         }
 
