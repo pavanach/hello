@@ -9,9 +9,7 @@ pipeline {
         }
          stage('Docker build') {
             steps {
-                sh """
-                          echo "GIT_BRANCH=${env.GIT_BRANCH}" >> /etc/environment
-                          echo "GIT_COMMIT=${env.GIT_COMMIT}" >> /etc/environment
+                sh """ docker images -a
                           """
             }
         }
