@@ -9,7 +9,10 @@ pipeline {
         }
          stage('Docker build') {
             steps {
-                sh "docker build -t hello-k8s ."
+                sh """
+                    cd /Users/pavan.achugatla/Documents/mnaut/scm/hello/
+                    docker build -t hello-k8s .
+                    """
             }
         }
 
