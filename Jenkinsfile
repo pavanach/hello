@@ -1,13 +1,17 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent {
-        docker { image 'node:14-alpine' }
-    }
+    agent any
+
     stages {
-        stage('Test') {
+        stage('Hello') {
             steps {
-                sh 'node --version'
+                echo 'Hello World'
             }
         }
+         stage('GoodBye') {
+            steps {
+                echo 'Hello World - Good Bye'
+            }
+        }
+
     }
 }
