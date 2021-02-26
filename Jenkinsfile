@@ -9,8 +9,8 @@ pipeline {
         }
          stage('Docker build') {
             steps {
-                sh """ docker images -a
-                          """
+                echo "test docker path"
+                echo "$PATH"
             }
         }
 
